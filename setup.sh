@@ -7,6 +7,7 @@ pip3 install -r backend/requirements.txt
 # Setup frontend
 echo 'Setting up frontend...'
 cd frontend
+sudo apt install npm
 npm install
 cd ..
 
