@@ -13,8 +13,10 @@ deactivate
 echo 'Setting up frontend...'
 cd frontend
 sudo apt-get update
-sudo apt-get install nodejs
-sudo apt install npm
+sudo apt install curl
+nvm install 12.18.4
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
 sudo npm install -g @vue/cli
 npm install
 cd ..
