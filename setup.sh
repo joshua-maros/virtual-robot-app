@@ -1,3 +1,7 @@
+# Install Basics
+sudo apt-get install python3-venv
+sudo apt install python3-pip
+
 # Setup backend
 echo 'Setting up backend...'
 python3 -m venv ./backend/env
