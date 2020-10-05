@@ -7,6 +7,7 @@ pip3 install -r backend/requirements.txt
 # Setup frontend
 echo 'Setting up frontend...'
 cd frontend
+sudo apt-get update
 sudo apt install nodejs
 sudo npm install -g @vue/cli
 npm install
@@ -14,7 +15,6 @@ cd ..
 
 # Setup nginx
 echo 'Installing nginx'
-sudo apt-get update
 sudo apt-get install nginx
 deactivate
 
