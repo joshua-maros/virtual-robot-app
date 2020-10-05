@@ -9,14 +9,14 @@ See the example code for more details.
 
 * Clone repo in project, change name with desired name
 ```
-git subtree add --prefix name http://power.local:3000/vassilis/ui-project-template.git master --squash
+git clone https://github.com/Virtual-FTC/virtual-robot-app.git
 ```
 
 * Update name field of frontend/package.json and package-lock.json with desired name
 
 # Setting up after clone
 
-Run setup.sh to install dependencies.
+Run `. setup.sh` to install dependencies.
 
 # Running for dev
 
