@@ -12,7 +12,7 @@ pip3 install -r backend/requirements.txt
 echo 'Setting up frontend...'
 cd frontend
 sudo apt-get update
-sudo apt install nodejs
+sudo apt-get install nodejs
 sudo npm install -g @vue/cli
 npm install
 cd ..
