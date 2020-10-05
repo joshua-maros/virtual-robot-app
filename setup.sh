@@ -13,6 +13,7 @@ echo 'Setting up frontend...'
 cd frontend
 sudo apt-get update
 sudo apt-get install nodejs
+sudo apt install npm
 sudo npm install -g @vue/cli
 npm install
 cd ..
