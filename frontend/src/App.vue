@@ -3,24 +3,18 @@
     <link rel="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
     <img alt="Vue logo" src="./assets/logo.png">
-    <resetButton/>
-    <enable-button/>
-    <upload-button/> 
+    <footer-comp/>
   </div>
 </template>
 
 <script>
 // import HelloWebSockets from './components/HelloWebSockets.vue'
-import resetButton from './components/resetButton.vue'
-import enableButton from './components/enableButton.vue'
-import uploadButton from './components/upload.vue'
+import footerComp from './components/footer.vue'
 
 export default {
   name: 'App',
   components: {
-    resetButton,
-    enableButton,
-    uploadButton
+    footerComp,
   }
 }
 </script>
