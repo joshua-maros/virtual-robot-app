@@ -23,10 +23,7 @@ class Backend(WSBackend):
         logging.info('Got ping msg: ' + data['msg'])
         return 'testPong', {'msg': 'PONG'}
 
-
-
 # Main, start-up everything
 if __name__ == '__main__':
     # Create backend
     Backend().run()
-
