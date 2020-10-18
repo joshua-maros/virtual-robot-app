@@ -1,0 +1,4 @@
+backend/env/
+package-lock.json
+frontend/node_modules/
+backend/__pycache__/
