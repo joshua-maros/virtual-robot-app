@@ -15,10 +15,10 @@ logging.getLogger('socketio.server').setLevel(logging.ERROR)
 logging.getLogger('engineio.server').setLevel(logging.ERROR)
 
 #Upload Folder Location 
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = 'proxy_config'
 
 #Extension Checker
-ALLOWED_EXTENSIONS = {'xml', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'yaml'}
 def allowed_file_types(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
