@@ -2,8 +2,14 @@
   <div id="app">
     <link rel="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <iframe id="stream"
+    title="ROS Stream"
+
+    src="http://34.122.215.36">
+    </iframe>
+
     <footer-comp/>
+    
   </div>
 </template>
 
@@ -25,7 +31,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#stream{
+  height: 100vh;
+  width: 100%;
 }
 
 </style>
