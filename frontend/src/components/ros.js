@@ -1,8 +1,10 @@
 //Javascript file for initalizing ROS and a websocket on port 9090
 import ROSLIB from 'roslib'
 
+var current_url = window.location.href;
+var ros_ip = current_url.split(":")
 var ros = new ROSLIB.Ros({
-    url : 'ws://localhost:9090'
+    url : 'ws:' + ros_ip[1] + ':9090'
   });
 
   ros.on('connection', function() {

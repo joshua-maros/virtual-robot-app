@@ -15,7 +15,7 @@ logging.getLogger('socketio.server').setLevel(logging.ERROR)
 logging.getLogger('engineio.server').setLevel(logging.ERROR)
 
 #Upload Folder Location 
-UPLOAD_FOLDER = 'proxy_config'
+UPLOAD_FOLDER = "/home/" + os.environ.get('USER') + "/virtual-robot/src/proxy/config"
 
 #Extension Checker
 ALLOWED_EXTENSIONS = {'yaml'}
@@ -54,24 +54,24 @@ class WSBackend:
         @app.route('/upload', methods=['GET', 'POST'])
         def upload_page():
             if request.method == 'GET':
-                return redirect('http://127.0.0.1:9080/')
+                return redirect('/')
                     
             if request.method == 'POST':
                 if 'file' not in request.files:
                     flash('No file part')
-                    return redirect('http://127.0.0.1:9080/')
+                    return redirect('/')
 
                 file = request.files['file']
 
                 if file.filename == '':
                     flash('No selected file')
-                    return redirect('http://127.0.0.1:9080/')
+                    return redirect('/')
 
                 if file and allowed_file_types(file.filename):
                     filename = secure_filename(file.filename)
                     path = os.getcwd()
                     file.save(os.path.join(path, app.config['UPLOAD_FOLDER'], filename))
-                    return redirect('http://127.0.0.1:9080/')
+                    return redirect('/')
 
 
         # Start flask/socketio loop, will not return
