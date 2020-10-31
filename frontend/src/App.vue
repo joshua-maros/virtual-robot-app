@@ -5,10 +5,10 @@
     <iframe id="stream"
     title="ROS Stream"
 
-    src="http://34.122.215.36">
+    :src="streamIp">
     </iframe>
 
-    <footer-comp/>
+    <footer-comp @updateIp="updateIp($event)"/>
     
   </div>
 </template>
@@ -21,6 +21,15 @@ export default {
   name: 'App',
   components: {
     footerComp,
+  },
+  data: () => ({
+    streamIp: "",
+  }),
+  methods: {
+    updateIp (ip){
+      alert(ip)
+      this.streamIp = "https://" + ip;
+    }
   }
 }
 </script>
@@ -30,7 +39,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 #stream{

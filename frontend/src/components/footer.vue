@@ -2,24 +2,30 @@
     <div id="footer">
         <div class="open-close-footer" v-on:click="onClick"></div>
         <div class="footer">
-            <enable-button/>
+            <robot-type-dropdown/>
+            <robot-position-dropdown/>
             <resetButton/>
             <upload-button/> 
+            <stream-selector @updateIp="updateIp($event)"/>
         </div>
     </div>
 </template>
 
 <script >
 import resetButton from './resetButton.vue'
-import enableButton from './enableButton.vue'
 import uploadButton from './upload.vue'
+import streamSelector from './streamSelector.vue'
+import robotTypeDropdown from './robotTypeDropdown.vue'
+import robotPositionDropdown from './robotPositionDropdown.vue'
 
 export default {
   name: 'footerComp',
   components: {
     resetButton,
-    enableButton,
-    uploadButton
+    uploadButton,
+    streamSelector,
+    robotTypeDropdown,
+    robotPositionDropdown,
   },
   methods: {
       onClick: function(){
@@ -33,6 +39,9 @@ export default {
         document.getElementsByClassName("open-close-footer")[0].style.bottom =
         "250px";
         }
+      },
+      updateIp: function(ip){
+        this.$emit('updateIp', ip);
       }
   }
 }
@@ -64,14 +73,19 @@ export default {
   text-align: center;
   position: fixed;
   bottom: 0px;
-  left: 50%;
+  left: 48%;
   transition: 0.5s;
-  border-bottom: 50px solid #555;
+  border-bottom: 50px solid #444444;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   height: 0;
   width: 125px;
 }
 
+.open-close-footer:hover{
+  border-bottom: 50px solid rgb(133, 126, 126);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
 
 </style>

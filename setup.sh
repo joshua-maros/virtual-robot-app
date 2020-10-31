@@ -22,6 +22,9 @@ nvm install 12.18.4
 
 sudo npm install -g @vue/cli
 npm install
+
+npm install vue-dropdowns
+
 cd ..
 
 # Setup nginx
