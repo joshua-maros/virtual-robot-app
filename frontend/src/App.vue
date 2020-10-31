@@ -27,8 +27,7 @@ export default {
   }),
   methods: {
     updateIp (ip){
-      alert(ip)
-      this.streamIp = "https://" + ip;
+      this.streamIp = "http://" + ip;
     }
   }
 }
