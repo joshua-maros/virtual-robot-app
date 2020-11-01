@@ -90,7 +90,7 @@
   .confirmation__button.confirmation__button--complete {
     cursor: not-allowed;
     background: #79BA7A;
-    min-width: 50px;
+    min-width: 200px;
     padding: 0em;
     font-size: 1em;
     box-shadow: 0px 6px 54px rgba(104,160,106,0.5);

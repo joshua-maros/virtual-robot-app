@@ -1,6 +1,7 @@
 <template>
     <div id='stream_selector' class="stream-selector">
-        <input v-model="ip">
+        <input v-model="ip">   
+        <span></span>
         <button @click='updateIp()'>Update Stream IP</button>
     </div>
 </template>
@@ -25,7 +26,10 @@ export default {
 
 .stream-selector {
   position: absolute;
-  top: 5%;
-  left: 80%;
+  top: 15%;
+  right: 8%;
+}
+.stream-selector button {
+  margin-left: 27px;
 }
 </style>

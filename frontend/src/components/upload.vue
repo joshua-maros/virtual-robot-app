@@ -20,8 +20,9 @@ export default {
 <style scoped>
 
 #config_file_form {
-  padding-top: 10px;
-  margin: 100px 30%;
+  position: absolute;
+  top: 50%;
+  right: 8%;
 }
 
 </style>
