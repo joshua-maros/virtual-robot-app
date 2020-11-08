@@ -4,7 +4,8 @@ import ROSLIB from 'roslib'
 var current_url = window.location.href;
 var ros_ip = current_url.split(":")
 var ros = new ROSLIB.Ros({
-    url : 'ws:' + ros_ip[1] + ':9091'
+    url : 'ws:' + ros_ip[1] + ':9091',
+    transportLibrary: 'websocket'
   });
 
   ros.on('connection', function() {
