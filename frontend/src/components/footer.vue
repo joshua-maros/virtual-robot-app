@@ -17,6 +17,24 @@ import uploadButton from './upload.vue'
 import streamSelector from './streamSelector.vue'
 import robotTypeDropdown from './robotTypeDropdown.vue'
 import robotPositionDropdown from './robotPositionDropdown.vue'
+import ros from './ros.js'
+import ROSLIB from 'roslib'
+
+var keepAlive = new ROSLIB.Topic({
+   ros : ros,
+   name : '/keep_alive',
+   messageType : 'std_msgs/Bool'
+ });
+
+function stillAlive(){
+     var alive = new ROSLIB.Message({
+                data: true
+            });
+     keepAlive.publish(alive);
+     setTimeout(() => {  stillAlive() }, 20000);
+}
+
+setTimeout(stillAlive(),20000);
 
 export default {
   name: 'footerComp',
